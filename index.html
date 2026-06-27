@@ -10,6 +10,19 @@
 </head>
 <body>
 
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-text">MSM<span class="loader-dot">.</span></div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-logo">MSM<span class="dot">.</span></div>
@@ -18,15 +31,18 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+    <div class="nav-right">
+      <button id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
+    <canvas id="particles"></canvas>
     <div class="hero-content">
       <p class="hero-eyebrow">👋 Hello, I'm</p>
       <h1 class="hero-name">Monish S M</h1>
@@ -66,9 +82,9 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm a <strong>third-year Computer Science Engineering student</strong> at SCSVMV University, Kanchipuram. I'm passionate about building things with code and constantly pushing myself to grow technically and personally.</p>
+          <p>I'm a <strong>second-year Computer Science Engineering student</strong> at SCSVMV University, Kanchipuram. I'm passionate about building things with code and constantly pushing myself to grow technically and personally.</p>
           <p>I served as a <strong>PALS Student Leader</strong> in collaboration with <strong>IIT Madras</strong> for one year, contributing to student engagement and leadership initiatives. I participated in workshops at Bangalore and IIT Hyderabad through the PALS initiative.</p>
-          <p>Right now, I'm on a focused journey preparing for <strong>GATE 2027</strong> to secure admission to a top IIT — building strong fundamentals one topic at a time.</p>
+          <p>Right now I'm on a focused journey preparing for <strong>GATE 2027</strong> to secure admission to a top IIT — building strong fundamentals one topic at a time.</p>
           <div class="about-tags">
             <span>🎓 B.E. CSE (2028)</span>
             <span>🌟 Ex-PALS Leader</span>
@@ -77,10 +93,68 @@
           </div>
         </div>
         <div class="about-stats">
-          <div class="stat-card"><span class="stat-num">2028</span><span class="stat-label">Expected Grad</span></div>
-          <div class="stat-card"><span class="stat-num">3+</span><span class="stat-label">Certifications</span></div>
-          <div class="stat-card"><span class="stat-num">IIT</span><span class="stat-label">GATE 2027 Goal</span></div>
-          <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Languages Spoken</span></div>
+          <div class="stat-card reveal"><span class="stat-num">2028</span><span class="stat-label">Expected Grad</span></div>
+          <div class="stat-card reveal"><span class="stat-num">3+</span><span class="stat-label">Certifications</span></div>
+          <div class="stat-card reveal"><span class="stat-num">IIT</span><span class="stat-label">GATE 2027 Goal</span></div>
+          <div class="stat-card reveal"><span class="stat-num">3</span><span class="stat-label">Languages Spoken</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="section-inner">
+      <p class="section-label">MY JOURNEY</p>
+      <h2 class="section-title">Timeline</h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2022</div>
+          <div class="tl-card">
+            <h4>Completed Higher Secondary</h4>
+            <p>Velammal Matric Hr. Sec. School, Chennai</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024</div>
+          <div class="tl-card">
+            <h4>Started B.E. CSE @ SCSVMV University</h4>
+            <p>Began Computer Science Engineering journey at Kanchipuram</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024–25</div>
+          <div class="tl-card">
+            <h4>PALS Student Leader — IIT Madras</h4>
+            <p>Served 1 year as Student Leader; attended workshops in Bangalore & IIT Hyderabad</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2026</div>
+          <div class="tl-card">
+            <h4>PALS Innowah Grand Finale</h4>
+            <p>Selected participant — March 2026. Started GATE 2027 preparation targeting IIT.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot tl-future"></div>
+          <div class="tl-year">2027</div>
+          <div class="tl-card tl-card-future">
+            <h4>🎯 GATE 2027</h4>
+            <p>Targeting top IIT — Engineering Mathematics, DSA, OS, DBMS, CN</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot tl-future"></div>
+          <div class="tl-year">2028</div>
+          <div class="tl-card tl-card-future">
+            <h4>🎓 B.E. Graduation</h4>
+            <p>Expected graduation — SCSVMV University</p>
+          </div>
         </div>
       </div>
     </div>
@@ -92,21 +166,45 @@
       <p class="section-label">WHAT I KNOW</p>
       <h2 class="section-title">Skills & Tools</h2>
       <div class="skills-grid">
-        <div class="skill-group">
+        <div class="skill-group reveal">
           <h3><i class="fas fa-code"></i> Languages</h3>
           <div class="skill-pills">
             <span class="pill pill-blue">Python</span>
             <span class="pill pill-orange">Java</span>
             <span class="pill pill-gray">C</span>
           </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span>Python</span>
+              <div class="bar"><div class="bar-fill" data-w="70"></div></div>
+              <span class="pct">70%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>Java</span>
+              <div class="bar"><div class="bar-fill" data-w="60"></div></div>
+              <span class="pct">60%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>C</span>
+              <div class="bar"><div class="bar-fill" data-w="55"></div></div>
+              <span class="pct">55%</span>
+            </div>
+          </div>
         </div>
-        <div class="skill-group">
+        <div class="skill-group reveal">
           <h3><i class="fas fa-database"></i> Databases</h3>
           <div class="skill-pills">
             <span class="pill pill-teal">MySQL</span>
           </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span>MySQL</span>
+              <div class="bar"><div class="bar-fill" data-w="50"></div></div>
+              <span class="pct">50%</span>
+            </div>
+          </div>
         </div>
-        <div class="skill-group">
+        <div class="skill-group reveal">
           <h3><i class="fas fa-tools"></i> Tools</h3>
           <div class="skill-pills">
             <span class="pill pill-red">Git</span>
@@ -114,8 +212,20 @@
             <span class="pill pill-orange">MS Office</span>
             <span class="pill pill-gray">GitHub</span>
           </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span>Git</span>
+              <div class="bar"><div class="bar-fill" data-w="55"></div></div>
+              <span class="pct">55%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>VS Code</span>
+              <div class="bar"><div class="bar-fill" data-w="80"></div></div>
+              <span class="pct">80%</span>
+            </div>
+          </div>
         </div>
-        <div class="skill-group">
+        <div class="skill-group reveal">
           <h3><i class="fas fa-brain"></i> Soft Skills</h3>
           <div class="skill-pills">
             <span class="pill pill-purple">Teamwork</span>
@@ -124,7 +234,7 @@
             <span class="pill pill-orange">Adaptability</span>
           </div>
         </div>
-        <div class="skill-group">
+        <div class="skill-group reveal">
           <h3><i class="fas fa-language"></i> Languages Spoken</h3>
           <div class="skill-pills">
             <span class="pill pill-gray">Tamil (Native)</span>
@@ -142,7 +252,7 @@
       <p class="section-label">WHAT I'VE BUILT</p>
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card reveal">
           <div class="project-top">
             <i class="fas fa-folder-open project-icon"></i>
             <div class="project-links">
@@ -155,7 +265,7 @@
             <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card reveal">
           <div class="project-top">
             <i class="fas fa-folder-open project-icon"></i>
             <div class="project-links">
@@ -168,7 +278,7 @@
             <span>Leadership</span><span>Documentation</span><span>MS Office</span>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card reveal">
           <div class="project-top">
             <i class="fas fa-folder-open project-icon"></i>
             <div class="project-links">
@@ -191,65 +301,81 @@
       <p class="section-label">MILESTONES</p>
       <h2 class="section-title">Achievements</h2>
       <div class="achievements-list">
-        <div class="achievement-item">
+        <div class="achievement-item reveal">
           <div class="ach-icon">🏁</div>
           <div class="ach-body">
             <h4>PALS Innowah Grand Finale</h4>
             <p>Selected as a participant in the grand finale — March 2026</p>
           </div>
         </div>
-        <div class="achievement-item">
+        <div class="achievement-item reveal">
           <div class="ach-icon">🐍</div>
           <div class="ach-body">
             <h4>HackerRank — Basic Python Certified</h4>
             <p>Earned official certification in Python fundamentals</p>
           </div>
         </div>
-        <div class="achievement-item">
+        <div class="achievement-item reveal">
           <div class="ach-icon">🌆</div>
           <div class="ach-body">
             <h4>Think2Impact Workshop — Bangalore</h4>
             <p>Completed intensive workshop conducted under PALS Initiative</p>
           </div>
         </div>
-        <div class="achievement-item">
+        <div class="achievement-item reveal">
           <div class="ach-icon">🔬</div>
           <div class="ach-body">
             <h4>RSW Workshop — IIT Hyderabad</h4>
             <p>Participated in research skills workshop conducted by PALS, IIT Hyderabad</p>
           </div>
         </div>
-        <div class="achievement-item">
+        <div class="achievement-item reveal">
           <div class="ach-icon">⭐</div>
           <div class="ach-body">
             <h4>PALS Student Leader — IIT Madras Collaboration</h4>
-            <p>Completed 1 year as Student Leader at SCSVMV University — recognized for leadership, punctuality & teamwork</p>
+            <p>Completed 1 year as Student Leader — recognized for leadership, punctuality & teamwork</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education">
+  <!-- CERTIFICATES -->
+  <section id="certificates">
     <div class="section-inner">
-      <p class="section-label">MY JOURNEY</p>
-      <h2 class="section-title">Education</h2>
-      <div class="edu-timeline">
-        <div class="edu-card">
-          <div class="edu-year">2024 – 2028</div>
-          <div class="edu-details">
-            <h3>B.E. Computer Science Engineering</h3>
-            <p>SCSVMV University, Kanchipuram</p>
-            <span class="edu-badge">In Progress</span>
+      <p class="section-label">CREDENTIALS</p>
+      <h2 class="section-title">Certificates</h2>
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
+          <div class="cert-body">
+            <h4>Basic Python</h4>
+            <p>HackerRank</p>
+            <span class="cert-badge">Certified</span>
           </div>
         </div>
-        <div class="edu-card">
-          <div class="edu-year">2022</div>
-          <div class="edu-details">
-            <h3>Higher Secondary Education</h3>
-            <p>Velammal Matric Hr. Sec. School, Chennai</p>
-            <span class="edu-badge edu-done">Completed</span>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="cert-body">
+            <h4>Think2Impact Workshop</h4>
+            <p>PALS Initiative — Bangalore</p>
+            <span class="cert-badge">Completed</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-flask"></i></div>
+          <div class="cert-body">
+            <h4>RSW Workshop</h4>
+            <p>PALS — IIT Hyderabad</p>
+            <span class="cert-badge">Completed</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+          <div class="cert-body">
+            <h4>Innowah Grand Finale</h4>
+            <p>PALS — March 2026</p>
+            <span class="cert-badge">Participant</span>
           </div>
         </div>
       </div>
@@ -262,19 +388,36 @@
       <p class="section-label">LET'S TALK</p>
       <h2 class="section-title">Get in Touch</h2>
       <p class="contact-sub">I'm open to internships, remote opportunities, collaborations, and anything interesting. Feel free to reach out!</p>
-      <div class="contact-links">
-        <a href="mailto:Monishmsm2128@gmail.com" class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <span>Monishmsm2128@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/monish-msm" target="_blank" class="contact-card">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn — Monish MSM</span>
-        </a>
-        <a href="https://github.com/monishms2128" target="_blank" class="contact-card">
-          <i class="fab fa-github"></i>
-          <span>GitHub — monishms2128</span>
-        </a>
+      <div class="contact-wrapper">
+        <div class="contact-links">
+          <a href="mailto:Monishmsm2128@gmail.com" class="contact-card reveal">
+            <i class="fas fa-envelope"></i>
+            <span>Monishmsm2128@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/monish-msm" target="_blank" class="contact-card reveal">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn — Monish MSM</span>
+          </a>
+          <a href="https://github.com/monishms2128" target="_blank" class="contact-card reveal">
+            <i class="fab fa-github"></i>
+            <span>GitHub — monishms2128</span>
+          </a>
+        </div>
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="form-name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="form-email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea id="form-msg" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-note" id="form-status"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -284,6 +427,9 @@
     <p>Designed & Built by <strong>Monish S M</strong> · 2025</p>
     <p class="footer-motto">"Consistency beats intensity — show up every day. 🔥"</p>
   </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="back-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
   <script src="script.js"></script>
 </body>
